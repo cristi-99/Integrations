@@ -1,0 +1,20 @@
+first_name: Cristian, last_name: Istrate, title: CEO, personal_email: kmjpym0y89qqenc@demo.zenefits.com, date_of_birth: 1955-02-28, gender: M, city: Brooklyn, state: NY
+first_name: Alex, last_name: Chin, title: Instructor, personal_email: Alexte59gr5ib4@demo.zenefits.com, date_of_birth: 1971-03-10, gender: M, city: Hollister, state: CA
+first_name: Martha, last_name: Beverly, title: Trainer, personal_email: Marthaate6579ioc@demo.zenefits.com, date_of_birth: 1981-11-03, gender: F, city: San Francisco, state: CA
+first_name: Nathan, last_name: Ashby, title: Trainer, personal_email: Nathanud2cv768k8@demo.zenefits.com, date_of_birth: 1984-05-02, gender: M, city: San Francisco, state: CA
+first_name: Sarah, last_name: Coverdale, title: Instructor, personal_email: Sarahuy84yw3r1h@demo.zenefits.com, date_of_birth: 1977-10-16, gender: F, city: Greenbrae, state: CA
+first_name: Steve, last_name: Alter, title: Trainer, personal_email: Stevejzfmyuw1mp@demo.zenefits.com, date_of_birth: 1970-07-14, gender: M, city: Corte Madera, state: CA
+first_name: James, last_name: Black, title: Instructor, personal_email: Jameslx0pleoynx@demo.zenefits.com, date_of_birth: 1976-06-19, gender: M, city: San Francisco, state: CA
+first_name: Jane, last_name: Cranston, title: Receptionist, personal_email: Janeuas91wbvna@demo.zenefits.com, date_of_birth: 1981-05-19, gender: F, city: San Gregorio, state: CA
+first_name: Heather, last_name: Lopez, title: Fitness Training Lead, personal_email: Heatherzsxrvmq8n8@demo.zenefits.com, date_of_birth: 1980-11-26, gender: F, city: San Francisco, state: CA
+first_name: Nicholas, last_name: Bell, title: Fitness Training Associate, personal_email: Nicholashv29pdzkj7@demo.zenefits.com, date_of_birth: 1983-5-9, gender: M, city: San Francisco, state: CA
+first_name: Michelle, last_name: Bell, title: Fitness Training Associate, personal_email: Michellefm9mnemwhs@demo.zenefits.com, date_of_birth: 1965-4-15, gender: F, city: San Francisco, state: CA
+first_name: Janice, last_name: Hill, title: Fitness Training Associate, personal_email: Janice9vgktgj0u4@demo.zenefits.com, date_of_birth: 1971-1-3, gender: F, city: San Francisco, state: CA
+first_name: Harry, last_name: Patterson, title: Fitness Training Associate, personal_email: Harrymxdra0mwo0@demo.zenefits.com, date_of_birth: 1961-4-17, gender: M, city: San Francisco, state: CA
+first_name: Joyce, last_name: Ramirez, title: Fitness Training Associate, personal_email: Joyceemmndivkl3@demo.zenefits.com, date_of_birth: 1960-9-7, gender: F, city: San Francisco, state: CA
+first_name: Sean, last_name: Morris, title: Fitness Training Associate, personal_email: Sean51a5kz8eal@demo.zenefits.com, date_of_birth: 1968-8-28, gender: M, city: San Francisco, state: CA
+first_name: Mary, last_name: Wood, title: Fitness Training Associate, personal_email: Marywaelyat4p6@demo.zenefits.com, date_of_birth: 1976-3-6, gender: F, city: San Francisco, state: CA
+first_name: Nathan, last_name: White, title: Fitness Training Associate, personal_email: Nathanynnvji4m6q@demo.zenefits.com, date_of_birth: 1991-3-2, gender: M, city: San Francisco, state: CA
+first_name: Janice, last_name: Lopez, title: Fitness Training Associate, personal_email: Janicew89j0kst54@demo.zenefits.com, date_of_birth: 1994-4-10, gender: F, city: San Francisco, state: CA
+first_name: Jenifer, last_name: Drake, title: Facilities Manager, personal_email: Jenifer8tfi4ej8mq@demo.zenefits.com, date_of_birth: 1965-01-01, gender: F, city: San Francisco, state: CA
+first_name: Michael, last_name: Garcia, title: Trainer, personal_email: Michael1nc0a1t2ps@demo.zenefits.com, date_of_birth: 1975-02-02, gender: M, city: San Francisco, state: CA
