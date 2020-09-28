@@ -7,6 +7,7 @@ export class ZenefitsConfig {
   constructor(config: ConfigService) {
     this.ZENEFITS_API_KEY = config.get('ZENEFITS_API_KEY');
     this.zenefits_getPeople_url = 'http://api.zenefits.com/core/people';
+    this.ZENEFITS_WEBHOOK_KEY = config.get('ZENEFITS_WEBHOOK_KEY');
     this.valid();
   }
 
@@ -19,6 +20,10 @@ export class ZenefitsConfig {
   @IsString()
   @IsNotEmpty()
   ZENEFITS_API_KEY: string;
+
+  @IsString()
+  @IsNotEmpty()
+  ZENEFITS_WEBHOOK_KEY: string;
 
   @IsString()
   @IsNotEmpty()
