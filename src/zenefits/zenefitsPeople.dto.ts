@@ -8,6 +8,7 @@ export class ZenefitsPeopleDto {
   city: string;
   state: string;
   street1: string;
+  employments: Record<'url', string>;
 
   getPeople() {
     return this.first_name + ' ' + this.last_name;
