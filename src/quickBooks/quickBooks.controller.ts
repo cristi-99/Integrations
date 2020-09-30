@@ -1,7 +1,7 @@
-import { Controller, Get, Header, Param, Res } from '@nestjs/common';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { Controller, Get, Param } from '@nestjs/common';
 
 import { QuickBooksService } from './quickBooks.service';
-import { Response } from 'express';
 
 @Controller('quickbooks')
 export class QuickBooksController {
@@ -21,9 +21,8 @@ export class QuickBooksController {
     return this.quickbooksService.getInvoice();
   }
 
-  //   @Get('invoicePDF/:id')
-  //   @Header('Content-Type', 'application/pdf')
-  //   async getInvoicePDF(@Param() params, @Res() res: Response) {
-  //     return await this.quickbooksService.getInvoicePDF(params.id);
-  //   }
+  // @Get('invoicePDF/:id')
+  // getInvoicePDF(@Param() params) {
+  //   return this.quickbooksService.getInvoicePDF(params.id);
+  // }
 }

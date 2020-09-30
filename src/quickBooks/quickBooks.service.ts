@@ -1,8 +1,6 @@
 import { HttpService, Injectable } from '@nestjs/common';
 import * as fs from 'fs';
-
 import { QuickBooksConfig } from 'src/config/quickBooks.config';
-
 @Injectable()
 export class QuickBooksService {
   quickBooks_token: string;
@@ -16,13 +14,14 @@ export class QuickBooksService {
     this.quickBooks_token = quickBooksConfig.QUICKBOOKS_TOKEN;
     this.baseUrl = quickBooksConfig.quickBooks_baseURL;
     this.realmId = quickBooksConfig.realmId;
-    this.headers = { Authorization: this.quickBooksConfig.QUICKBOOKS_TOKEN };
+    this.headers = {
+      Authorization: this.quickBooksConfig.QUICKBOOKS_TOKEN,
+    };
   }
   async getCostumers() {
     let url: string =
       this.baseUrl + '/company/' + this.realmId + '/query?query=';
-    let params: string;
-    params = 'select GivenName, FamilyName, CompanyName from Customer';
+    const params = 'select GivenName, FamilyName, CompanyName from Customer';
     url += params;
 
     let data: any;
@@ -36,7 +35,7 @@ export class QuickBooksService {
   }
 
   async getCompany() {
-    let url: string =
+    const url: string =
       this.baseUrl +
       '/company/' +
       this.realmId +
@@ -68,17 +67,27 @@ export class QuickBooksService {
     return data;
   }
 
-  async getInvoicePDF(id: number) {
-    let url: string =
-      this.baseUrl + '/company/' + this.realmId + '/invoice/' + id + '/pdf';
-    let data: any;
-    console.log(url);
-    await this.httpService
-      .get(url, { headers: this.headers })
-      .toPromise()
-      .then(res => {
-        fs.writeFileSync('invoice.pdf', res.data);
-      });
-    return 'asf';
-  }
+  // async getInvoicePDF(id: number) {
+  //   let url: string =
+  //     this.baseUrl + '/company/' + this.realmId + '/invoice/' + id + '/pdf';
+  //   console.log(url);
+  //   const decoder = new StringDecoder('base64');
+  //   let data;
+  //   await this.httpService
+  //     .get(url, { headers: this.headers })
+  //     .toPromise()
+  //     .then(res => {
+  //       data = res.data;
+
+  //       fs.writeFile('invoice.txt', res.data function(err) {
+  //         if (err) console.log(err);
+  //       });
+  //     })
+  //     .catch(err => {
+  //       if (err) console.log(err.response);
+  //       return err;
+  //     });
+  //   console.log(data);
+  //   return 'Done';
+  // }
 }
