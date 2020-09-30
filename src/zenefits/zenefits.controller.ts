@@ -1,4 +1,5 @@
-import { Controller, Get, Post, Headers, Body } from '@nestjs/common';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { Controller, Get, Post, Body } from '@nestjs/common';
 import { ZenefitsService } from './zenefits.service';
 
 @Controller('zenefits')
