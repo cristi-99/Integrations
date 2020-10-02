@@ -5,11 +5,10 @@ import { IsNotEmpty, IsString, validate } from 'class-validator';
 @Injectable()
 export class QuickBooksConfig {
   constructor(config: ConfigService) {
-    this.QUICKBOOKS_TOKEN = config.get('QUICKBOOKS_TOKEN');
-    this.quickBooks_baseURL = 'https://sandbox-quickbooks.api.intuit.com/v3';
-    'https://cristi99-dev-ed.my.salesforce.rest.marketingcloudapis.com';
-    this.realmId = config.get('QUICKBOOKS_REALM_ID');
+    this.quickBooks_baseURL = 'https://sandbox-quickbooks.api.intuit.com';
 
+    this.QUICKBOOKS_CLIENT_SECRET = config.get('QUICKBOOKS_CLIENT_SECRET');
+    this.QUICKBOOKS_CLIENT_ID = config.get('QUICKBOOKS_CLIENT_ID');
     this.valid();
   }
 
@@ -21,11 +20,11 @@ export class QuickBooksConfig {
 
   @IsString()
   @IsNotEmpty()
-  QUICKBOOKS_TOKEN: string;
+  QUICKBOOKS_CLIENT_ID: string;
 
   @IsString()
   @IsNotEmpty()
-  realmId: string;
+  QUICKBOOKS_CLIENT_SECRET: string;
 
   @IsString()
   @IsNotEmpty()

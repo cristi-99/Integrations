@@ -1,4 +1,4 @@
-import { HttpService, Injectable } from '@nestjs/common';
+import { HttpException, HttpService, Injectable } from '@nestjs/common';
 import { BambooConfig } from 'src/config/bamboo.config';
 import * as btoa from 'btoa';
 
@@ -18,7 +18,7 @@ export class BambooService {
       Accept: 'application/json',
     };
   }
-  async getEmployee() {
+  async getEmployees() {
     const url: string = this.baseUrl + '/employees/directory';
     let data: any;
 
@@ -27,6 +27,30 @@ export class BambooService {
       .toPromise()
       .then(res => {
         data = res.data.employees;
+      })
+      .catch(err => {
+        const status = err.message.split(' ');
+        const code = status[status.length - 1];
+        throw new HttpException(err.message, parseInt(code));
+      });
+
+    return data;
+  }
+
+  async getEmployeesFiles(id: number) {
+    const url: string = this.baseUrl + `/employees/${id}/files/view/`;
+    let data: any;
+    await this.httpService
+      .get(url, { headers: this.headers })
+
+      .toPromise()
+      .then(res => {
+        data = res.data;
+      })
+      .catch(err => {
+        const status = err.message.split(' ');
+        const code = status[status.length - 1];
+        throw new HttpException(err.message, parseInt(code));
       });
 
     return data;

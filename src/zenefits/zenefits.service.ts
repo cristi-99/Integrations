@@ -8,6 +8,7 @@ import { ZenefitsConfig } from 'src/config/zenefits.config';
 import * as fs from 'fs';
 import { ZenefitsPeopleDto } from './zenefitsPeople.dto';
 import { ZenefitsPeopleEnum } from './zenefitsPeople.enum';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import createHmac = require('create-hmac'); // create-hmac has no default exports and normal ts import will generate an error
 
 @Injectable()
@@ -33,6 +34,11 @@ export class ZenefitsService {
       .toPromise()
       .then(res => {
         data = res.data.data.data;
+      })
+      .catch(err => {
+        const status = err.message.split(' ');
+        const code = status[status.length - 1];
+        throw new HttpException(err.message, parseInt(code));
       });
     let str: string;
     str = '';
@@ -69,6 +75,11 @@ export class ZenefitsService {
       .toPromise()
       .then(res => {
         data = res.data.data.data[0].hire_date;
+      })
+      .catch(err => {
+        const status = err.message.split(' ');
+        const code = status[status.length - 1];
+        throw new HttpException(err.message, parseInt(code));
       });
     return data;
   }

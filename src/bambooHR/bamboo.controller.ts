@@ -1,11 +1,16 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Param } from '@nestjs/common';
 import { BambooService } from './bamboo.service';
 
 @Controller('bamboo')
 export class BambooController {
   constructor(private bambooService: BambooService) {}
-  @Get()
+  @Get('employees')
   getEmployee() {
-    return this.bambooService.getEmployee();
+    return this.bambooService.getEmployees();
+  }
+
+  @Get('files/:id')
+  getEmployeesFiles(@Param() params) {
+    return this.bambooService.getEmployeesFiles(params.id);
   }
 }
